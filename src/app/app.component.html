@@ -1,0 +1,170 @@
+<div style="padding: 10px">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+
+  <mat-card>
+    <h2>Buttons</h2>
+    <p>Default Buttons</p>
+    <button mat-button>Default</button>    
+    <button mat-button color="primary">Primary</button>
+    <button mat-button color="accent">Accent</button>
+    <button mat-button color="warn">Warn</button>
+    <br>
+    <br>
+    <p>Raised Buttons</p>
+    <button mat-raised-button>Default</button>    
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+    <br>
+    <br>
+    <p>Flat Buttons</p>
+    <button mat-flat-button>Default</button>    
+    <button mat-flat-button color="primary">Primary</button>
+    <button mat-flat-button color="accent">Accent</button>
+    <button mat-flat-button color="warn">Warn</button>
+    <br><br>
+    <p>Stroked Buttons</p>
+    <button mat-stroked-button>Default</button>    
+    <button mat-stroked-button color="primary">Primary</button>
+    <button mat-stroked-button color="accent">Accent</button>
+    <button mat-stroked-button color="warn">Warn</button>
+    <br><br>
+    <p>Icon Buttons</p>
+    <button mat-icon-button>
+        <mat-icon aria-label="Example icon-button with a heart icon">home</mat-icon>
+    </button>
+    <button mat-icon-button color="primary">
+      <mat-icon aria-label="Example icon-button with a heart icon">home</mat-icon>
+    </button>
+    <button mat-icon-button color="accent">
+      <mat-icon aria-label="Example icon-button with a heart icon">home</mat-icon>
+    </button>
+    <button mat-icon-button color="warn">
+      <mat-icon aria-label="Example icon-button with a heart icon">home</mat-icon>
+    </button>
+    <br><br>
+    <p>Fab Buttons</p>
+    <button mat-fab>Default</button>    
+    <button mat-fab color="primary">Primary</button>
+    <button mat-fab color="accent">Accent</button>
+    <button mat-fab color="warn">Warn</button>
+    <br><br>
+    <p>Mini Fab Buttons</p>
+    <button mat-mini-fab><mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon></button>
+    <button mat-mini-fab color="primary"><mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon></button>
+    <button mat-mini-fab color="accent"><mat-icon aria-label="Example icon-button with a heart icon">home</mat-icon></button>
+    <button mat-mini-fab color="warn"><mat-icon aria-label="Example icon-button with a heart icon">save</mat-icon></button>
+    <br><br>
+  </mat-card>
+
+  <br><br>
+  
+  <mat-card>
+    <h2>Selects</h2>
+    <p>Select</p>
+    <mat-form-field color="primary">
+      <mat-select placeholder="Favorite Animal">
+          <mat-option value="Cat">Cat</mat-option>
+          <mat-option value="Dog">Dog</mat-option>
+          <mat-option value="Bird">Bird</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br><br>
+    <p>Select with Outline</p>
+    <mat-form-field color="primary" appearance="outline">
+        <mat-select placeholder="Favorite Animal">
+            <mat-option value="Cat">Cat</mat-option>
+            <mat-option value="Dog">Dog</mat-option>
+            <mat-option value="Bird">Bird</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br><br>
+    <p>Select with Hint</p>
+    <mat-form-field color="primary">
+        <mat-select placeholder="Favorite Animal">
+            <mat-option value="Cat">Cat</mat-option>
+            <mat-option value="Dog">Dog</mat-option>
+            <mat-option value="Bird">Bird</mat-option>
+        </mat-select>
+        <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+      </mat-form-field>
+  </mat-card>
+
+  <mat-card>
+    <h2>Inputs</h2>
+    <p>Default Input</p>
+    <mat-form-field color="primary">
+      <input matInput placeholder="Favorite food">
+    </mat-form-field>
+    <br><br>
+    <p>Input with Outline</p>
+    <mat-form-field color="primary" appearance="outline">
+      <mat-label>Favorite Food</mat-label>
+      <input matInput placeholder="Favorite food">
+    </mat-form-field>
+    <br><br>
+    <p>Input with Hint</p>
+    <mat-form-field color="primary" appearance="outline">
+      <mat-label>Favorite Food</mat-label>
+      <input matInput placeholder="Favorite food">
+      <mat-hint>Hint</mat-hint>
+      <br><br>
+    </mat-form-field>
+    <p>Input with Error</p>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+  </mat-card>
+  <br><br>
+  <mat-card>
+    <h2>Textareas</h2>
+    <p>Default Textarea</p>
+    <mat-form-field color="primary">
+      <textarea matInput placeholder="Address"></textarea>
+    </mat-form-field>
+    <br><br>
+    <p>Textarea with Outline</p>
+    <mat-form-field color="primary" appearance="outline">
+      <mat-label>Address 2</mat-label>
+      <textarea matInput placeholder="Address 2"></textarea>
+    </mat-form-field>
+    <br><br>
+    <p>Textarea with Autosize</p>
+    <mat-form-field color="primary" appearance="outline">
+      <textarea matInput 
+        placeholder="Autosizes to 5 rows (Adjustable)"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="2"
+        cdkAutosizeMaxRows="5"></textarea>
+    </mat-form-field>
+  </mat-card>
+  <br><br>
+  <mat-card>
+    <h2>Checkboxes</h2>
+    <br>
+    <mat-checkbox> Default (Accent color)</mat-checkbox>
+    <br><br>
+    <mat-checkbox color="primary">Primary</mat-checkbox>
+    <br><br>
+    <mat-checkbox color="accent">Accent</mat-checkbox>
+    <br><br>
+    <mat-checkbox color="warn">Warn</mat-checkbox>
+    <br><br> 
+    <p>Optional label position</p>
+    <mat-checkbox labelPosition='before'> Default (Accent color)</mat-checkbox>
+    <br><br>    
+  </mat-card>
+  <br><br>
+  <mat-card>
+    <h2>Date Picker</h2>
+    <br>
+  
+   
+  </mat-card>
+
+</div>
