@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+@import '../mixins/colors.scss';
+
+@include mat-core();
+
+$sample-app-primary: mat-palette($gs-primary);
+$sample-app-accent: mat-palette($gs-gold);
+$sample-app-warn: mat-palette($gs-error);
+
+$sample-app-theme: mat-light-theme($sample-app-primary, 
+    $sample-app-accent, $sample-app-warn);
+
+@include angular-material-theme($sample-app-theme);
